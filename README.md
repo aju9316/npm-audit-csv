@@ -20,3 +20,6 @@ $ npm audit --json | npm-audit-html --fatal-exit-code
 
 ## acknowledgements
 This project was inspired by [npm-audit-html](https://www.npmjs.com/package/npm-audit-html)
+
+## license
+[MIT](https://github.com/aju9316/npm-audit-csv/blob/master/LICENSE)
