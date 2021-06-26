@@ -1,0 +1,27 @@
+{
+  "name": "npm-audit-csv",
+  "version": "1.0.0",
+  "description": "utility to export npm audit results in csv format",
+  "main": "index.js",
+  "bin": {
+    "npm-audit-csv": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "audit",
+    "export",
+    "csv",
+    "packages",
+    "output"
+  ],
+  "author": "Aziz Tinwala",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^7.2.0",
+    "fs-extra": "^10.0.0",
+    "json2csv": "^5.0.6"
+  }
+}
