@@ -27,14 +27,17 @@ program
 			if (data && Object.keys(data.advisories).length) {
 				for (let key in data.advisories) {
 					if (data.advisories.hasOwnProperty(key)) {
-						let packageName = data.advisories[key].findings[0].paths[0].split('>')[0];
+						let packageNames = [];
+						data.advisories[key].findings[0].paths.forEach(function(v){
+							packageNames.push(v.split('>')[0]);
+						});
 
 						finalData.push({
 							["Severity"]: data.advisories[key].severity,
 							["Vulnerability"]: data.advisories[key].title,
 							["Package Name"]: data.advisories[key].module_name,
-							["Vulnerability Found in"]: packageName,
-							["Path"]: data.advisories[key].findings[0].paths[0],
+							["Vulnerability Found in"]: [...new Set(packageNames)].join('\n'),
+							["Path"]: data.advisories[key].findings[0].paths.join('\n'),
 							["How to fix"]: data.advisories[key].recommendation,
 							["Adivisory"]: data.advisories[key].url,
 							["References"]: data.advisories[key].references
@@ -42,7 +45,6 @@ program
 					}
 				}
 			}
-
 			await generateCSV(finalData, cmd.fatalExitCode)
 		} catch (err) {
 			console.log('Failed to parse NPM Audit JSON!', err)
