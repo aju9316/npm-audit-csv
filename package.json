@@ -1,6 +1,6 @@
 {
   "name": "npm-audit-csv",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "utility to export npm audit results in csv format",
   "main": "index.js",
   "bin": {
@@ -17,11 +17,20 @@
     "packages",
     "output"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aju9316/npm-audit-csv.git"
+  },
   "author": "Aziz Tinwala",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^7.2.0",
     "fs-extra": "^10.0.0",
     "json2csv": "^5.0.6"
-  }
+  },
+  "private": false,
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "engineStrict": true
 }
