@@ -1,7 +1,7 @@
 # npm-audit-csv 
 utility to export npm audit results in csv format
 
-### ⭐ Works with updated npm audit output
+### ⭐ Works with updated npm audit  output
 
 ## installation
 ```
