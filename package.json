@@ -1,6 +1,6 @@
 {
   "name": "npm-audit-csv",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "utility to export npm audit results in csv format",
   "main": "index.js",
   "bin": {
