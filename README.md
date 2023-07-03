@@ -1,7 +1,7 @@
 # npm-audit-csv 
 utility to export npm audit results in csv format
 
-### ⭐ Works with updated npm audit  output
+### ⭐ Works with updated npm audit output
 
 ## installation
 ```
@@ -17,7 +17,7 @@ By default the report will be saved to `npm-audit.csv`
 If you'd like the generator to exit with non-zero exit code when vulnerabilities are found, you can add the --fatal-exit-code option:
 
 ```
-$ npm audit --json | npm-audit-html --fatal-exit-code
+$ npm audit --json | npm-audit-csv --fatal-exit-code
 ```
 
 ## license
